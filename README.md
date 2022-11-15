@@ -21,8 +21,8 @@ class Main(Frame):
             "(", "0", ")", "X^2"
         ]
 
-        x = 10
-        y = 140
+        x = 30
+        y = 230
         for bt in btns:
             com = lambda x=bt: self.logicalc(x)
             Button(text=bt, bg="#FFF",
@@ -45,7 +45,7 @@ class Main(Frame):
         elif operation == "=":
             self.formula = str(eval(self.formula))
         else:
-            if self.formula == "0":
+            if self.formula == "1":
                 self.formula = ""
             self.formula += operation
         self.update()
@@ -59,7 +59,7 @@ class Main(Frame):
 if __name__ == '__main__':
     root = Tk()
     root["bg"] = "#000"
-    root.geometry("485x550+200+200")
+    root.geometry("485x550+200+400")
     root.title("Калькулятор")
     root.resizable(False, False)
     app = Main(root)
